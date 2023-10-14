@@ -6,15 +6,12 @@
             <div class="mb-3">
                 <label>Title</label>
                 <input type="text" class="form-control" formControlName="title" />
-                <div *ngIf="postForm.get('title')?.touched && !postForm.get('title')?.valid">
-                    <div *ngIf="postForm.get('title')?.errors?.['required']">Title is required</div>
-                    <div *ngIf="postForm.get('title')?.errors?.['minlength']">Title must be at least 10 characters</div>
-                </div>
+                <app-validation-message [control]="postForm.get('title')!" controlName="Title"></app-validation-message>
             </div>
             <div class="mb-3">
                 <label>Description</label>
                 <textarea class="form-control" formControlName="description"></textarea>
-                <div>{{ showDescriptionErrors() }}</div>
+                <app-validation-message [control]="postForm.get('description')!" controlName="Description"></app-validation-message>
             </div>
             <div class="my-3">
                 <button type="submit" class="btn btn-primary" [disabled]="!postForm.valid">Update Post</button>

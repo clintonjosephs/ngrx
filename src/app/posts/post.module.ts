@@ -8,6 +8,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { StoreModule } from '@ngrx/store';
 import { postsReducer } from './state/post.reducer';
 import { POST_STATE_NAME } from './state/post.selectors';
+import { SharedModuleModule } from '../shared/shared-module.module';
 
 const routes: Routes = [
   {
@@ -23,6 +24,7 @@ const routes: Routes = [
 @NgModule({
   declarations: [PostsListComponent, AddpostComponent, EditPostComponent],
   imports: [
+    SharedModuleModule,
     CommonModule, 
     RouterModule.forChild(routes), 
     ReactiveFormsModule, 
