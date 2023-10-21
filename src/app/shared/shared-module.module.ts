@@ -6,7 +6,7 @@ import { ValidationMessageComponent } from './components/validation-message/vali
 
 @NgModule({
   declarations: [
-    ValidationMessageComponent
+    ValidationMessageComponent,
   ],
   imports: [
     CommonModule
