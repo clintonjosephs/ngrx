@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { RxjsLearningComponent } from './rxjs-learning/rxjs-learning.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'rxjs-learning', component: RxjsLearningComponent },
   {
     path: 'counter',
     loadChildren: () =>
